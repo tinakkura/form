@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+     <meta charset="UTF-8"> 
+     <meta namne="viewport" content="widht=device-widht, initial-scale=1.0"> 
+     <title>Formulário Completo</title> 
+     <style> 
+        body { 
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container { 
+            max-width: 600px;
+            margin: auto; 
+            padding: 20px; 
+            border: 1px solid #ccc; 
+            border-radius: 10px; 
+        } 
+        .form-group {  
+            margin-bottom: 15px;
+        } 
+        label { 
+            display: block; 
+            margin-bottom: 5px; 
+            font-weight: bold;
+        } 
+        input, select, textarea { 
+            width: 100%;
+            padding: 8px; 
+            margin-bottom: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+        } 
+        .radio-group, .checkbox-group { 
+            display: flex; 
+            justify-content: space-between;
+        } 
+        .radio-group label, .checkbox-group label { 
+            margin-right: 10px; 
+            font-weight: normal;
+        }  
+        button { 
+            padding: 10px 15 px; 
+            background-color: #28a745; 
+            border: none; 
+            color: white; 
+            border-radius: 5px; 
+            cursor:  pointer;
+        } 
+        button:hover { 
+            background-color: #218838; 
+        } 
+    </style> 
+</head>
+<body> 
+
+       <div class="form-container"> 
+            <h2>Formulário Completo</h2> 
+            <form action="/submit" method="post"> 
+                <!--Campo de texto--> 
+                <div class="form-group"> 
+                    <label for="nome">Nome:</label> 
+                    <input type="text" id="nome" name="nome" required> 
+                </div> 
+
+                <!--Campo de senha-->
+                <div class="form-group"> 
+                    <label for="senha">Senha:</label> 
+                    <input type="password" id="senha" name="senha" required>
+                </div> 
+
+                <!--Área de texto--> 
+                <div class="form-group"> 
+                    <label for="mensagem">Mensagem:</label> 
+                    <textarea id="mensagem" name="mensagemn" rows="4" required></textarea>
+                </div> 
+
+                <!--Botões de rádio--> 
+                <div class="form-group"> 
+                    <label>Gênero:</label> 
+                    <div class="radio-group"> 
+                     <label><input type="radio" name="genero" value="masculino" required> 
+Masculino</label> 
+                  <label><input type="radio" name="genero" value="feminino">  
+Feminino</label> 
+                  <label><input type="radio" name="genero" value="outro"> Outro</label> 
+                </div> 
+            </div> 
+
+            <!--Caixas de seleção--> 
+            <div class="form-group"> 
+                <label>Interesses:</label> 
+                <div class="checkbox-group"> 
+                     <label><input type="checkbox" name="interesses" value="tecnologia"> 
+Tecnologia</label> 
+                     <label><input type="checkbox" name="interesses" value="esportes"> 
+Esportes</label> 
+                      <label><input type="checkbox" name="interesses" value="musica"> 
+Música</label>     
+                </div> 
+            </div> 
+            
+            <!--Lista suspensa--> 
+            <div class="form-group"> 
+                <label for="pais">País:</label> 
+                <select id="pais" name="pais" required> 
+                    <opotion value="brasil">Brasil</opotion> 
+                    <option value="estados-unidos">Estados Unidos</option> 
+                    <option value="canada">Canadá</option> 
+                    <option value="australia">Austrália</option> 
+                </select>
+            </div> 
+
+            <!--Botão de envio--> 
+            <div class="form-group"> 
+                <button type="submit">Enviar</button>
+            </div> 
+        </form>
+    </div> 
+
+       </body>
+       </html> 
+            
